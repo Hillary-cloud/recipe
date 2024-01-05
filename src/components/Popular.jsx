@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const Popular = () => {
   const [popular, setPopular] = useState([]);
@@ -26,8 +27,10 @@ const Popular = () => {
       {popular.map((recipe) => {
         return (
           <div  key={recipe.id}>
+            <NavLink to={"/recipe/" + recipe.id}>
             <img className="rounded-xl object-cover hover:scale-105 duration-300" src={recipe.image} alt={recipe.title} />
             <p className="text-gray-700">{recipe.title}</p>
+            </NavLink>
             </div>
         );
       })}

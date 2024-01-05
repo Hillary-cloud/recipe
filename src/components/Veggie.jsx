@@ -29,8 +29,8 @@ const Veggie = () => {
       <Splide options={{ perPage: 3, autoplay: true, type: "loop", pagination: true, rewind: true, gap: 8, arrows:true, drag: "free" }}>
         {veggie.map((recipe) => {
           return (
-            <SplideSlide>
-              <div key={recipe.id}>
+            <SplideSlide key={recipe.id}>
+              <div >
               <div className="relative">
                 
                 <div className="absolute w-full rounded-md p-5 text-white font-semibold h-full bg-black/50">

@@ -1,32 +1,37 @@
-import React from 'react';
+import React from "react";
 import { FaPizzaSlice, FaHamburger } from "react-icons/fa";
 import { GiNoodles, GiChopsticks } from "react-icons/gi";
-import { NavLink } from 'react-router-dom';
-
+import { NavLink } from "react-router-dom";
 
 const Category = () => {
   return (
-    <div className='flex justify-center gap-2 py-6'>
-      <div>
+    <div className="flex justify-center gap-2 py-4">
+      <div className="rounded-full h-24 w-24 p-4 bg-black text-white">
         <NavLink to={"/cuisine/Italian"}>
-            <FaPizzaSlice />
-            <h4>Italian</h4>
+          <FaPizzaSlice className="mt-2 mx-auto" />
+          <h4 className="text-center">Italian</h4>
         </NavLink>
       </div>
-      <div>
-        <FaHamburger />
-        <h4>American</h4>
+      <div className="rounded-full h-24 w-24 p-4 bg-black text-white">
+        <NavLink to={"/cuisine/American"}>
+          <FaHamburger className="mt-2 mx-auto" />
+          <h4 className="text-center">American</h4>
+        </NavLink>
       </div>
-      <div>
-        <GiNoodles />
-        <h4>Thai</h4>
+      <div className="rounded-full h-24 w-24 p-4  bg-black text-white">
+        <NavLink to={"/cuisine/Thai"}>
+          <GiNoodles className="mt-2 mx-auto" />
+          <h4 className="text-center">Thai</h4>
+        </NavLink>
       </div>
-      <div>
-        <GiChopsticks />
-        <h4>Japanese</h4>
+      <div className="rounded-full h-24 w-24 p-4 bg-black text-white">
+        <NavLink to={"/cuisine/Japanese"}>
+          <GiChopsticks className="mt-2 mx-auto" />
+          <h4 className="text-center">Japanese</h4>
+        </NavLink>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Category
+export default Category;
