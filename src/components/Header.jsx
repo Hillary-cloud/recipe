@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { FaBars, FaTimes, FaSearch, FaUserAlt } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { FaBars, FaBook, FaWindows, FaTimes, FaSearch, FaUserAlt } from "react-icons/fa";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -19,8 +19,10 @@ const Header = () => {
   return (
     <div className="max-w-scree-2xl mb-12 md:px-12 xl:px-28 h-[80px] bg-white-500 shadow-lg">
       <div className="flex justify-between">
+        
         <h2 className="text-3xl font-bold mt-4 ml-4">
-          Yummy<span className="text-orange-700">Foods</span>
+        <NavLink to="/">Yummy<span className="text-orange-700">Foods</span></NavLink>
+          
         </h2>
         <form onSubmit={submitHandler}>
         <div className="hidden lg:flex w-[250px] rounded-3xl h-10 md:w-[400px] mt-4 bg-gray-200">
@@ -34,14 +36,13 @@ const Header = () => {
             value={input}
           />
            
-         
         </div>
         </form>
 
         <ul className="hidden md:flex justify-between gap-4 mt-4">
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li><NavLink className="hover:text-orange-700" to="/">Home</NavLink></li>
+          <li><NavLink className="hover:text-orange-700" to="/">About</NavLink></li>
+          <li><NavLink className="hover:text-orange-700" to="/">Contact</NavLink></li>
         </ul>
 
         {showMenu ? (
@@ -73,16 +74,16 @@ const Header = () => {
               </div>
               </form>
               <div className="flex gap-4 my-2">
-                <FaUserAlt size={25} />
-                <a href="">Home</a>
+                <FaWindows size={25} />
+                <NavLink to="/">Home</NavLink>
+              </div>
+              <div className="flex gap-4 my-2">
+                <FaBook size={25} />
+                <NavLink to="/">About</NavLink>
               </div>
               <div className="flex gap-4 my-2">
                 <FaUserAlt size={25} />
-                <a href="">About</a>
-              </div>
-              <div className="flex gap-4 my-2">
-                <FaUserAlt size={25} />
-                <a href="">Contact</a>
+                <NavLink to="/">Contact</NavLink>
               </div>
             </div>
           

@@ -15,7 +15,7 @@ const Pages = () => {
           <Route path='/recipe/:name' element={<Recipe />} />
         </Routes>
     </div>
-  )
+  );
 }
 
 export default Pages
